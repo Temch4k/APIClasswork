@@ -1,0 +1,13 @@
+<div class = "form-data">
+    <form class="row" action="<%= `/courses/${course._id}/update?_method=PUT` %>" method="POST">
+    <label class="col-sm-5 form-control" for="txtTitle">Course Title</label>
+    <input class="col-sm-5 form-control" type = "text" name = "title" id = "txtTitle" autofocus required value="<%=course.title%>">
+    <label class="col-sm-5 form-control" for = "txtDesc">Description</label>
+    <input class="col-sm-5 form-control" type="text" name="description" id="txtDesc" required value="<%=course.description%>">
+    <label class="col-sm-5 form-control" for="txtStudents">Max Students</label>
+    <input class="col-sm-5 form-control" type="text" name="maxStudents" id="txtStudents" required value="<%=course.maxStudents%>">
+    <label class="col-sm-5 form-control" for="txtCost">Cost</label>
+    <input class="col-sm-5 form-control" type="text" name="cost" id="txtCost" required value="<%=course.cost%>">
+    <button class="col-sm-5 btn-primary" type="submit">Save</button>
+    </form>
+</div>

@@ -1,0 +1,15 @@
+<div class = "form-data">
+    <form class = "row" action="<%= `/users/${user._id}/update?_method=PUT` %>" method="POST">
+    <label class="col-sm-5 form-control" for="txtFirst">First Name</label>
+    <input class="col-sm-5 form-control" type = "text" name = "first" id = "txtFirst" autofocus required value="<%=user.name.first%>">
+    <label class="col-sm-5 form-control" for="txtLast">Last Name</label>
+    <input class="col-sm-5 form-control" type = "text" name = "last" id = "txtLast" autofocus required value="<%=user.name.last%>">
+    <label class="col-sm-5 form-control" for = "txtEmail">Email</label>
+    <input class="col-sm-5 form-control" type="email" name="email" id="txtEmail" required value="<%=user.email%>">
+    <label class="col-sm-5 form-control" for = "txtZipCode">ZipCode</label>
+    <input class="col-sm-5 form-control" type="text" name="zipCode" id="txtZipCpde" required value="<%=user.zipCode%>">
+    <label class="col-sm-5 form-control" for = "txtPassword">Passowrd</label>
+    <input class="col-sm-5 form-control" type="text" name="password" id="txtPassword" required value="<%=user.password%>">
+    <button type = "submit">Edit</button>
+    </form>
+</div>

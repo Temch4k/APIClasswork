@@ -1,0 +1,36 @@
+<h2 class="center">Subscriber Table for <%= subscriber.name %>
+</h2>
+<table class="table">
+    <tbody>
+        <tr>
+            <td>Name</td>
+            <td>
+                <%= subscriber.name %>
+            </td>
+        <tr>
+            <td>Email</td>
+            <td>
+                <%= subscriber.email %>
+            </td>
+        </tr>
+        <tr>
+            <td>ZipCode</td>
+            <td>
+                <%= subscriber.zipCode %>
+            </td>
+        </tr>
+        <tr>
+            <td>Num of Courses</td>
+            <td>
+                <%= subscriber.courses.length %>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<a href="<%=`/subscribers/${subscriber._id}/edit` %>">
+    <span class="button">Edit</span>
+</a>
+<a href="/subscribers">
+    <span class="button">Back to the list</span>
+</a>

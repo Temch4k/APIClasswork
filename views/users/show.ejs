@@ -1,0 +1,33 @@
+<h2 class="center">User Table for <%= user.name.first %>
+    <%= user.name.last %>
+</h2>
+<table class="table">
+    <tbody>
+        <tr>
+            <td>Name</td>
+            <td>
+                <%= user.name.first %>
+                <%= user.name.last %>
+
+            </td>
+        <tr>
+            <td>Email</td>
+            <td>
+                <%= user.email %>
+            </td>
+        </tr>
+        <tr>
+            <td>ZipCode</td>
+            <td>
+                <%= user.zipCode %>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<a href="<%=`/users/${user._id}/edit` %>">
+    <span class="button">Edit</span>
+</a>
+<a href="/users">
+    <span class="button">Back to the list</span>
+</a>

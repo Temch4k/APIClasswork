@@ -1,0 +1,11 @@
+<div class="form-data">
+    <form class="row" action="<%= `/subscribers/${subscriber._id}/update?_method=PUT` %>" method="POST">
+        <label class="col-sm-5 form-control" for="txtName">Name</label>
+        <input class="col-sm-5 form-control" type="text" name="name" id="txtName" autofocus required value="<%=subscriber.name%>">
+        <label class="col-sm-5 form-control" for="txtEmail">Email Address</label>
+        <input class="col-sm-5 form-control" type="email" name="email" id="txtEmail" required value="<%=subscriber.email%>">
+        <label class="col-sm-5 form-control" for="txtZipCode">Zip Code</label>
+        <input class="col-sm-5 form-control"stype="text" name="zipCode" id="txtZipCode" required value="<%=subscriber.zipCode%>">
+        <button class="col-sm-5 btn-primary" type="submit">Save</button>
+    </form>
+</div>

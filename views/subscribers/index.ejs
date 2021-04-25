@@ -1,0 +1,44 @@
+<h2 class = "center">Subscriber Table</h2>
+<h4 class = "center">Add a new Subscriber <a href="subscribers\new">here </a> </h4>
+<table class="table">
+    <thread>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>ZipCode</th>
+            <th>View full info</th>
+            <th>Edit</th>
+            <th>Delte</th>
+        </tr>
+    </thread>
+    <tbody>
+        <% subscribers.forEach(subscriber => { %>
+            <tr>
+                <td>
+                    <%= subscriber.name %>
+                </td>
+                <td>
+                    <%= subscriber.email %>
+                </td>
+                <td>
+                    <%= subscriber.zipCode %>
+                </td>
+                <td>
+                    <a href= "<%=`/subscribers/${subscriber._id}` %>">
+                        View full info
+                    </a>
+                </td>
+                <td>
+                    <a href="<%= `/subscribers/${subscriber._id}/edit` %>">
+                        Edit
+                    </a>
+                </td>
+                <td>
+                    <a href="<%= `/subscribers/${subscriber._id}/delete?_method=DELETE` %>" onclick="return confirm('Are you sure?')">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+            <% })%>
+    </tbody>
+</table>
